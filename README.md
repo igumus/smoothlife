@@ -16,6 +16,7 @@ $ ./bin/smoothlife
 
 | Argument         | Description     | Default Value|
 |--------------|-----------|------------|
+| rand | Enable/Disable randomness<sup>1</sup> | false |
 | ra | Paper's outer circle radius | 11.0 |
 | dt | Infinitesimal time to give ability to obtain arbitrary small time steps | 0.05 |
 | b1 | Paper's b1 param | 0.278 |
@@ -26,11 +27,12 @@ $ ./bin/smoothlife
 | alpha-m | Paper's alpha(m) param | 0.147 |
 | interval | Duration between each step | 300ms |
 | step | Execution step count | 200 |
-| with-paper-diff | Switch between diff algorithms<sup>1</sup> | true |
+| with-paper-diff | Switch between diff algorithms<sup>2</sup> | true |
 
 ### Argument notes
 
-1. `with-paper-diff` command line argument is used to switch between paper's diff proposal and tsoding's diff implementation. `true` means `use paper's diff proposal`.
+1.`rand` is disabled by default for experimenting purposes. 
+2. `with-paper-diff` command line argument is used to switch between paper's diff proposal and tsoding's diff implementation. `true` means `use paper's diff proposal`.
 
 ## Todos
 

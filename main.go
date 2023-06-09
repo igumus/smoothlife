@@ -97,9 +97,7 @@ func nextStep(grid *[HEIGHT][WIDTH]float64, paperDiff bool) {
 }
 
 func main() {
-	//rand.Seed(time.Now().UnixNano())
-	rand.Seed(0)
-
+	flagRand := flag.Bool("rand", false, "")
 	flagRa := flag.Float64("ra", 11.0, "")
 	flagDt := flag.Float64("dt", 0.05, "")
 	flagB1 := flag.Float64("b1", 0.278, "")
@@ -112,6 +110,12 @@ func main() {
 	flagStep := flag.Int("step", 200, "")
 	flagPaperDiff := flag.Bool("with-paper-diff", true, "")
 	flag.Parse()
+
+	if *flagRand {
+		rand.Seed(time.Now().UnixNano())
+	} else {
+		rand.Seed(0)
+	}
 
 	grid := [HEIGHT][WIDTH]float64{}
 	initGrid(&grid)
