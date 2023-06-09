@@ -30,9 +30,8 @@ $ ./bin/smoothlife
 | with-paper-diff | Switch between diff algorithms<sup>2</sup> | true |
 
 ### Argument notes
-
-1.`rand` is disabled by default for experimenting purposes. 
-2. `with-paper-diff` command line argument is used to switch between paper's diff proposal and tsoding's diff implementation. `true` means `use paper's diff proposal`.
+- [1] `rand` is disabled by default for experimenting purposes
+- [2] `with-paper-diff` command line argument is used to switch between paper's diff proposal and tsoding's diff implementation. `true` means `use paper's diff proposal`
 
 ## Todos
 
