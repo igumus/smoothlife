@@ -41,14 +41,14 @@ func displayGrid(grid *[HEIGHT][WIDTH]float64) {
 			step := int(value) * (size - 1)
 			v := level[emod(step, size)]
 			fmt.Printf("%c", v)
+			fmt.Printf("%c", v)
 		}
 		fmt.Println()
 	}
-
 }
 
 func clearScreen() {
-	cmd := exec.Command("clear") //Linux example, its tested
+	cmd := exec.Command("clear")
 	cmd.Stdout = os.Stdout
 	cmd.Run()
 }
